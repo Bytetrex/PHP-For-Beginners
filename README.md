@@ -1,2 +1,2 @@
-# Open Source Sandbox Source
-This is a continued project of guido's currently being led by me UserByte.
+# Sandbox
+Coming soon. Feel free to follow me on <a href="https://twitter.com/FrancisGuido_">Twitter</a>.

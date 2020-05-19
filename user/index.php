@@ -1,5 +1,5 @@
 <?php
-   require($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php");
+   require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php");
    
    if (isset($_GET['username'])) {
        $username = $_GET['username'];
@@ -35,6 +35,5 @@
             </div>
         </div>
     </section>
-</body>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.php");
 
-</html>

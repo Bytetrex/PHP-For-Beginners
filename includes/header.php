@@ -15,7 +15,6 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/includes/config.php');
 
 <body>
 
-<main>
 <nav class='navbar is-spaced has-shadow'>
     <div class='container'>
         <div class='navbar-brand'>
@@ -70,3 +69,5 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/includes/config.php');
         </div>
     </div>
 </nav>
+
+<main>

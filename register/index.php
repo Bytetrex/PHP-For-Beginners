@@ -1,5 +1,5 @@
 <?php
-   require("../includes/config.php");
+   require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php");
    
    $errors = array();
    if(isset($_POST['Submit'])) {
@@ -115,7 +115,7 @@
                                 <button type="submit" class="button is-info" name="Submit">Register</button>
                             </div>
                             <div class="field">
-                                <p>Already have an account? <a href="../login/">Login</a></p>
+                                <p>Already have an account? <a href="/login/">Login</a></p>
                             </div>
                         </form>
                     </div>
@@ -125,6 +125,4 @@
             </div>
         </div>
     </section>
-</body>
-
-</html>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.php"); ?>

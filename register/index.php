@@ -53,14 +53,14 @@
        if(empty($errors)) {
            $password = password_hash($password, PASSWORD_BCRYPT);
            $id = NULL; 
-           $joined = time();
-           $lastseen = time();
+           $joinDate = time();
+           $lastSeen = time();
            
            $stmt = $mysqli->prepare("INSERT INTO users VALUES(?,?,?,?,?,?,?)");
-           $description = "Your description can be changed in the settings!";
-           $stmt->bind_param("isssiis", $id, $username, $email, $password, $joined, $lastseen, $description);
+           $bio = "Hello, I just registered!";
+           $stmt->bind_param("isssiis", $id, $username, $email, $password, $joinDate, $lastSeen, $bio);
            $stmt->execute();
-           header("Location: ../login/");
+           header("Location: /login/");
        }
    }
    ?>
@@ -79,7 +79,7 @@
                      }
                      ?>
                     <div class="box">
-                        <form method="post" action="index.php">
+                        <form method="post" action="#">
                             <div class="field">
                                 <label class="label">Username</label>
                                 <div class="control">

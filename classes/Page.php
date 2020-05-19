@@ -16,18 +16,18 @@ class Page {
         return $this->user['username'];
     }
 
-    public function joined() {
-        $joined = $this->user['joined'];
-        echo date("d/m/y", $joined);
+    public function joinDate() {
+        $joined = $this->user['joinDate'];
+        echo date("d/m/y", $joinDate);
     }
 
-    public function lastseen() {
-        $lastseen = $this->user['lastseen'];
-        echo date("d/m/y", $lastseen);
+    public function lastSeen() {
+        $lastseen = $this->user['lastSeen'];
+        echo date("d/m/y", $lastSeen);
     }
 
-    public function description() {
-        return $this->user['description'];
+    public function bio() {
+        return $this->user['bio'];
     }
 }
 ?>

@@ -1,9 +1,14 @@
 <?php
+// Session Initialisation
+session_name('SessionID'); // You can change 'SessionID' to whatever you want the session to be called.
 ob_start();
 session_start();
-include("connect.php");
-include("../classes/Page.php");
 
+// Required Files
+include($_SERVER['DOCUMENT_ROOT'] . '/includes/connect.php'); // Database Connection File (MySQLi)
+include ($_SERVER['DOCUMENT_ROOT'] . '/includes/Page.php');
+
+// Create Logged In.
 if(isset($_SESSION['id'])) {
     $loggedIn = $_SESSION['id'];
     $stmt = $mysqli->prepare("SELECT * FROM users WHERE id = ?");
@@ -12,25 +17,11 @@ if(isset($_SESSION['id'])) {
     $result = $stmt->get_result();
     $user = $result->fetch_array();
 
-    $stmt = $mysqli->prepare("UPDATE users SET lastseen = ? WHERE id = ?");
+// Update Last Seen When User Logs In.
+    $stmt = $mysqli->prepare("UPDATE users SET lastSeen = ? WHERE id = ?");
     $userid = $user['id'];
     $lastseen = time();
-    $stmt->bind_param("ii", $lastseen, $userid);
+    $stmt->bind_param("ii", $lastSeen, $userid);
     $stmt->execute();
 }
 ?>
-
-<html>
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../includes/styles.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-</head>
-
-<body>
-<?php include("header.php"); ?>
-</body>
-
-</html>

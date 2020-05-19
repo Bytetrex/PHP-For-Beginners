@@ -1,5 +1,5 @@
 <?php
-   require("../includes/config.php");
+   require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php");
    
    $errors = array();
    if(isset($_POST['Submit'])) {
@@ -17,7 +17,7 @@
                if(password_verify($password, $psw)) {
                     $id = $row['id'];
                     $_SESSION['id'] = $id;
-                    header("Location: ../dashboard/");
+                    header("Location: /dashboard/");
                }
                else {
                    array_push($errors, "<p class='has-text-danger'>Incorrect password!</p>");
@@ -44,7 +44,7 @@
                      }
                      ?>
                     <div class="box">
-                        <form method="post" action="index.php">
+                        <form method="post" action="#">
                             <div class="field">
                                 <label class="label">Username</label>
                                 <div class="control">
@@ -62,7 +62,7 @@
                                 <button type="submit" class="button is-info" name="Submit">Login</button>
                             </div>
                             <div class="field">
-                                <p>Need an account? <a href="../register/">Create one!</a></p>
+                                <p>Need an account? <a href="/register/">Create one!</a></p>
                             </div>
                         </form>
                     </div>
@@ -72,6 +72,4 @@
             </div>
         </div>
     </section>
-</body>
-
-</html>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.php"); ?>

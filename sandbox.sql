@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sandbox`
+-- Database: `main`
 --
 
 -- --------------------------------------------------------
@@ -33,9 +33,9 @@ CREATE TABLE `users` (
   `username` varchar(30) NOT NULL,
   `email` varchar(125) NOT NULL,
   `password` varchar(125) NOT NULL,
-  `joined` int(11) NOT NULL,
-  `lastseen` int(11) NOT NULL,
-  `description` varchar(250) NOT NULL
+  `joinDate` int(11) NOT NULL,
+  `lastSeen` int(11) NOT NULL,
+  `bio` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

@@ -6,7 +6,7 @@ session_start();
 
 // Required Files
 include($_SERVER['DOCUMENT_ROOT'] . '/includes/connect.php'); // Database Connection File (MySQLi)
-include ($_SERVER['DOCUMENT_ROOT'] . '/includes/Page.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/classes/Page.php');
 
 // Create Logged In.
 if(isset($_SESSION['id'])) {

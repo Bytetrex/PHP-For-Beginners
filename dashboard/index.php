@@ -1,5 +1,5 @@
 <?php
-require($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php");
 if($loggedIn == false) {
     header("Location: /register/");
 }

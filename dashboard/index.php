@@ -1,6 +1,8 @@
 <?php
-require("../includes/config.php");
+require($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php");
 if($loggedIn == false) {
-    header("Location: ../register/");
+    header("Location: /register/");
 }
 ?>
+
+// Still needs to be completed :p

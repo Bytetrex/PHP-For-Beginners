@@ -1,5 +1,21 @@
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . '/includes/config.php');
+<?php
+// Includes
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/includes/config.php');
+?>
 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/includes/bulma.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+
+<main>
 <nav class='navbar is-spaced has-shadow'>
     <div class='container'>
         <div class='navbar-brand'>
